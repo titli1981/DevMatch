@@ -45,10 +45,20 @@ h1,h2,h3{
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
 }
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus{
+      background-color: #00c6f0 ;
+  }
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: white;
+}
+
 // Home Page Styles
 .home-callout{
-  margin-top:   -  20px;
+  margin-top:   -20px;
   padding-top:     50px;
   padding-bottom: 100px;
-  color:white;
+  color: white;
 }
