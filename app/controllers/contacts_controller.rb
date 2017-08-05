@@ -11,7 +11,10 @@ class ContactsController < ApplicationController
       redirect_to new_contact_path
     else
       flash[:danger] = @contact.errors.full_messages.join(",")
-      # flash = {key: value, key: value}
+      # flash = {type: msg, type: msg}
+      # flash = {danger:"name can't be blank, email can't be blank....",
+      #           success: "Message sent}"
+      
       redirect_to new_contact_path
       
     end
