@@ -10,7 +10,8 @@ class ContactsController < ApplicationController
       flash[:success] = "Message sent"
       redirect_to new_contact_path
     else
-      flash[:error] = @contact.errors.full_messages.join(",")
+      flash[:danger] = @contact.errors.full_messages.join(",")
+      # flash = {key: value, key: value}
       redirect_to new_contact_path
       
     end
