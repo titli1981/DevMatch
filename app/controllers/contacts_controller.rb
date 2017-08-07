@@ -7,6 +7,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params) 
     # {name:Madhu, email:madhu.mishra@gmail.com, comment:hi}
     if @contact.save
+      # params = { :contact=>{:name=>"Madhu", :email=>"madhu@gmail.com, :body:=>"whatever"}}
+      name = params[:contact][:name]
+      email = params[:contact][:email]
+      body = params[:contact][:comments]
+      ContactMailer.contact_email(name, email, body).deliver
       flash[:success] = "Message sent"
       redirect_to new_contact_path
     else
