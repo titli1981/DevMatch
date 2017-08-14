@@ -2,4 +2,12 @@ Memberships
 * User should see link for Basic plan on home page
 * User should see link for Pro plan on home page
 * Basic plan link should point to regular Devise sign up form 
+
 * Pro plan link should point to a custom sign up form
+We'll learn a very important technique for sending data through a URL. This is called query string parameters.
+By passing data through a URL, we can send data from one page to the next page load.
+The 2 ways you can pass information (called parameters) from page to page is either using forms (POST data) or via query string parameters.
+
+ActiveRecord (rails way of querying the database)
+Parameters(any data that sent over the air called parameters)
+Substitution
