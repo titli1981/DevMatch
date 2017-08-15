@@ -11,3 +11,26 @@ The 2 ways you can pass information (called parameters) from page to page is eit
 ActiveRecord (rails way of querying the database)
 Parameters(any data that sent over the air called parameters)
 Substitution
+
+==================================================================================================================
+
+STRIPE Integration
+* Users should have a stripe customer token(id) in the users table
+
+* Javascript(pause the form and not submit to our servers) should prevent Pro form from 
+submitting , when user fills it out, and should send card info to Stripe. Stripe will 
+return with a card token.
+(This is done for one time payment. If we want recurring payment from customers we will 
+have to send back the card token to stripe for subscription and follow the steps below.)
+
+* Javascript should send users field(email and password) and card token to our Rails app. 
+Rails app should validate the user fields. Rails app will note wheather plan 1 or plan 2.
+
+* Once validated, Rails should send user info (email, plan id ) and card token to stripe 
+server and Stripe will create a subscription and send back customer token.
+Rails should save customer token and user info to our database.
+
+========================================================================================
+config/application.yaml (created by figaro installation)
+.gitignore(created by figaro installation)
+config/initializer/stripe.rb
