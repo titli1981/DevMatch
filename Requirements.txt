@@ -37,16 +37,18 @@ config/initializer/stripe.rb
 ==========================================================================================
 
 Stripe Integration
-
+=======================
 * Users should have a stripe customer token in the users table.
-* Javascript should prevent Pro form from submitting, when user fills it out,
+* Javascript should prevent Pro form from submitting, after user fills it out,
 and should send card info to Stripe. Stripe will return with a card token.(load js library)
+ 
+ Recurring Subscription
 * Javascript should send user fields and card token to our rails app. Rails app
 should validate the user fields. Rails app will note whether plan 1 or plan 2.
 * Once validated, Rails should send user info (email, plan id) and card token
 to Stripe server and Stripe will create a subscription and send back customer
 token. Rails should save customer token and user information to our database.
-
+==============================================================================================
 
 1- load js library => validates the credit card info and securily sends the card 
 field package to the Stripe to get the card token back.
