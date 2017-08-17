@@ -1,11 +1,11 @@
 class User < ApplicationRecord
-  has_one :profile
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :plan
+  has_one :profile
   
   attr_accessor :stripe_card_token
   # If Pro user passes validation(email, pssword, etc.),
