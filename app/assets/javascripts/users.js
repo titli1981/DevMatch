@@ -61,7 +61,7 @@ $(document).on('turbolinks:load', function(){
     var token = response.id;
     
     //Inject the card token in a hidden field (into form).
-    theForm.append($('<input type="hidden" name="user[stripe_card_token]">').val(taken));
+    theForm.append($('<input type="hidden" name="user[stripe_card_token]">').val(token));
     
     //Submit form to our Rails App.
     theForm.get(0).submit();
