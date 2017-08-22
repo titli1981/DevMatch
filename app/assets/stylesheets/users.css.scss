@@ -1,6 +1,6 @@
 .avatar-show-img{
-    width: 128px;
-    height: 128px;
+  width: 128px;
+  height: 128px;
 }
 .job_title_icon{
   display: inline-block;
@@ -15,7 +15,7 @@
 .well.profile-block{
     color: #fff;
     h3{
-        margin-top: 0;
+      margin-top: 0;
     }
 }
 // .well.profile-block{
@@ -25,13 +25,22 @@
 //     margin-top: 0;
 // }
 .well.profile-description {
-    background-color: #5cb85c;
-    border-color: #4cae4c;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 } 
 .well.profile-contact-info {
-    background-color: #5bc0de;
-    border-color: #46b8da;
-}   
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+// User index page styles
+.user-index-avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+.well.white-bg {
+  background: white;
+}
 
 
 
